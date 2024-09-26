@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Produt Payment"/>
+        <meta name="keywords"    content="Payment" />
+        <meta name="author"      content="Dominik Leibel" />
+        <title>Product Payment</title>
+
+        <link href="styles/style.css" rel="stylesheet"/>
+
+
+
+      <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';"> -->
+
+
+    </head>
+
+    <body>
+
+        
+        <h1>Product Payment</h1>
+
+        <div id="timerContainer">
+            <p>Please complete the payment within the next:</p>
+            <div id="timer">05:00</div> <!-- Timer starts from 5 minutes -->
+        </div>
+    
+        <!--Table containing data transfered from enquire.html-->
+        <table id="dataTransfered">
+            <tr>
+                <td>Name:</td>
+                <td><span id="Name"></span></td>
+            </tr>
+
+            <tr>
+                <td>Email Address:</td>
+                <td><span id="EmailAddress"></span></td>
+            </tr>
+
+            <tr>
+                <td>Phone number:</td>
+                <td><span id="PhoneNumber"></span></td>
+            </tr>
+
+            <tr>
+                <td>Way of Contact:</td>
+                <td><span id="WayOfContact"></span></td>
+            </tr>
+
+            <tr>
+                <td>Street Address:</td>
+                <td><span id="StreetAddress"></span></td>
+            </tr>
+
+            <tr>
+                <td>Suburb/ Town:</td>
+                <td><span id="SuburbTown"></span></td>
+            </tr>
+
+            <tr>
+                <td>State:</td>
+                <td><span id="State"></span></td>
+            </tr>
+
+            <tr>
+                <td>Postcode:</td>
+                <td><span id="Postcode"></span></td>
+            </tr>
+
+            <tr>
+                <td>Product:</td>
+                <td><span id="Product"></span></td>
+            </tr>
+
+            <tr>
+                <td>Storage:</td>
+                <td><span id="Storage"></span></td>
+            </tr>
+
+            <tr>
+                <td>Colour:</td>
+                <td><span id="Colour"></span></td>
+            </tr>
+
+            <tr>
+                <td>Quantity:</td>
+                <td><span id="Quantity"></span></td>
+            </tr>
+
+            <tr>
+                <td>Price:</td>
+                <td><span id="Price"></span></td>
+            </tr>
+            
+            <tr>
+                <td>Comment:</td>
+                <td><span id="Comment"></span></td>
+            </tr>
+
+        </table>
+
+
+        <!--Form for Payment Details-->
+        <form id="paymentForm"  method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+            
+            <!-- is hidden on website! Fieldset of inputs for the transfered Data-->
+            <fieldset id="dataTransfer">
+                <input type="text" name="Name" id="formName">
+                <input type="text" name="Email_Address" id="formEmailAddress">
+                <input type="text" name="Phone_number" id="formPhoneNumber">
+                <input type="text" name="preferred_way_of_contact" id="formWayOfContact">
+                <input type="text" name="Street_Address" id="formStreetAddress">
+                <input type="text" name="Suburb_Town" id="formSuburbTown">
+                <input type="text" name="State" id="formState">
+                <input type="text" name="Postcode" id="formPostcode">
+                <input type="text" name="Product" id="formProduct">
+                <input type="text" name="Storage" id="formStorage">
+                <input type="text" name="Colour" id="formColour">
+                <input type="text" name="Quantity" id="formQuantity">
+                <input type="text" name="Price" id="formPrice">
+                <input type="text" name="Comment" id="formComment">
+            </fieldset>
+
+            <fieldset id="payment_information">
+                <legend>Payment information</legend>
+
+            <!--Input for Credit Card Information-->
+            <label for="cc_type">Credit card type</label>
+                <select name="Credit card type" id="cc_type" class="select_option" >
+                    <option value="" selected="selected">Please Select a credit card type</option>
+                    <option value="Visa" >Visa</option>
+                    <option value="MasterCard" >MasterCard</option>
+                    <option value="American Express" >American Express</option>
+                </select>
+
+                <p>
+                    <label for="name_on_cc">Name on credit card</label> 
+                    <input type="text" name= "Name on credit card" id="name_on_cc"  size="20" title="Name on credit card">   
+                </p>
+
+                <p>
+                    <label for="cc_number">Credit card number</label> 
+                    <input type="text" name= "Credit card number" id="cc_number"  size="20"  title="Please Enter Credit Card number" >
+                </p>
+    
+
+    
+                <p>
+                    <label for="expiry_date">expiry date</label> 
+                    <input type="text" name="expiry date" id="expiry_date" maxlength="5" size="5"  placeholder="MM-YY" title="please enter the expiry date in the format mm-yy ">
+                </p>
+            
+                <p>
+                    <label for="cvv">CVV</label> 
+                    <input type="text" name="CVV" id="cvv" maxlength="3" size="2" placeholder="xxx" title="please enter the Card verification value (CVV) ">
+                </p>
+            </fieldset>
+
+            <input type="submit" value="Check-Out">
+            <input type="reset" value="Reset form">
+            <input type="reset" id="cancelorder" value="Cancel Order">
+
+        </form>
+
+        <footer>
+            <p id="footerHomepage">&#169; VR Headsets - Payment</p>
+        </footer>
+
+        <script src="scripts/payment.js"></script>
+
+    </body>
+
+</html>
