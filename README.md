@@ -1,6 +1,8 @@
 This is my Assignment so for for the Master Course at the Swinburne University Creating Web Application.
 
-You can get to the website by clicking on the link on the right handside of the about section.
+https://domil-dev.github.io/Creating-Web-Application-Assignment/
+
+You can get to the website by clicking on the link on the right handside of the about section as well.
 
 So far I used HTML, CSS and JavaScript. PHP and MySQL will follow in the following weeks to create the Backend.
 
